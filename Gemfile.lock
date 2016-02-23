@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    get_process_mem (0.2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  get_process_mem
+
+BUNDLED WITH
+   1.10.6
