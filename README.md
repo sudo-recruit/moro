@@ -1,4 +1,4 @@
-#momo
+#moro
 >monitor process memory usage
 
 ##Add `config.json` to project directory
