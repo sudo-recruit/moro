@@ -1,4 +1,5 @@
 require 'moro/monitor'
+require 'moro/datadog'
 
 module Moro
   class Daemon
@@ -6,8 +7,9 @@ module Moro
     def initialize(config)
       @monitor=Monitor.new(config)
       @logger = Logger.new STDOUT
+      @dog=Datadog.new
       puts config
-      
+
       if config["interval"]!=nil
         @interval=config["interval"]
       else
@@ -27,7 +29,12 @@ module Moro
       end
 
       while true
-        @monitor.show
+        data=@monitor.monit
+
+        data.each do|d|
+          @dog.send(d)
+        end
+
         @logger.info "stats memory"
 
         sleep(@interval)

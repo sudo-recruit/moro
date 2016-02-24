@@ -1,13 +1,15 @@
 PATH
   remote: .
   specs:
-    moro (0.0.2)
+    moro (0.0.4)
+      dogstatsd-ruby (~> 1.6.0)
       get_process_mem (~> 0.2.0)
       thor (~> 0.18)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    dogstatsd-ruby (1.6.0)
     get_process_mem (0.2.0)
     thor (0.19.1)
 
