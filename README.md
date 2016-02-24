@@ -1,8 +1,22 @@
 #moro
 >monitor process memory usage
 
-##Add `config.json` to project directory
-###example
+##Install
+```bash
+$ gem install moro
+```
+
+##Show process memory usage
+```bash
+$ moro show --config="config.example.json"
+```
+
+##Start a daemon to show process memory usage
+```bash
+$ moro start --config="config.example.json"
+```
+
+###config example
 ```json
 {
 	"processes": [{
