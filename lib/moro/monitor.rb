@@ -19,8 +19,6 @@ module Moro
       end
     end
 
-    private
-
     def monit
       data=[]
       @processes.each do |p|
@@ -28,6 +26,8 @@ module Moro
       end
       data
     end
+
+    private
 
     def get_processes()
       processes=[]
