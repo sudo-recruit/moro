@@ -5,8 +5,7 @@ module Moro
 
     def initialize(config)
       @monitor=Monitor.new(config)
-      log_file="app.log"
-      @logger = Logger.new log_file
+      @logger = Logger.new STDOUT
       puts config
       
       if config["interval"]!=nil

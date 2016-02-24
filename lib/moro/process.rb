@@ -5,8 +5,7 @@ module Moro
     attr_reader :name,:pid,:file
 
     def initialize(options)
-      log_file="app.log"
-      @logger = Logger.new log_file
+      @logger = Logger.new STDOUT
       @name=options[:name]
       @file=options[:file]
       update_pid

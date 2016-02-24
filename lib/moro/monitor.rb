@@ -6,9 +6,8 @@ module Moro
   class Monitor
 
     def initialize(config)
-      log_file="app.log"
       @config=config
-      @logger = Logger.new log_file
+      @logger = Logger.new STDOUT
       @logger.info "moro show"
       @processes=get_processes
     end
