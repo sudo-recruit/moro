@@ -5,8 +5,9 @@ require "get_process_mem"
 module Moro
   class Monitor
 
-    def initialize
+    def initialize(options)
       log_file="app.log"
+      @config=options[:config]
       @logger = Logger.new log_file
       @logger.info "momo show"
       @processes=get_processes
@@ -33,7 +34,7 @@ module Moro
     def get_config
       begin
         data = ''
-        f = File.open("config.json", "r")
+        f = File.open(@config, "r")
         f.each_line do |line|
           data += line
         end

@@ -3,8 +3,8 @@ require 'moro/monitor'
 module Moro
   class Daemon
 
-    def initialize
-      @monitor=Monitor.new
+    def initialize(options)
+      @monitor=Monitor.new(options)
       log_file="app.log"
       @logger = Logger.new log_file
     end
