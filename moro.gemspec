@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'moro'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = '2016-02-24'
   s.summary     = "moro is a simple daemon to monitor process memory usage"
   s.description = "moro is a simple daemon to monitor process memory usage"
