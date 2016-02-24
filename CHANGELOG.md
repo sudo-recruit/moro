@@ -1,5 +1,8 @@
+##0.0.5
+* send memory data to datadog
+
 ##0.0.4
-use STDOUT for log
+* use STDOUT for log
 
 ##0.0.3
 * [pr2 handle pid change](https://github.com/sudo-recruit/moro/pull/2)
