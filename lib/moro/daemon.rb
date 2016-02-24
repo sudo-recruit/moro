@@ -3,10 +3,17 @@ require 'moro/monitor'
 module Moro
   class Daemon
 
-    def initialize(options)
-      @monitor=Monitor.new(options)
+    def initialize(config)
+      @monitor=Monitor.new(config)
       log_file="app.log"
       @logger = Logger.new log_file
+      puts config
+      
+      if config["interval"]!=nil
+        @interval=config["interval"]
+      else
+        @interval=30
+      end
     end
 
     def start()
@@ -24,7 +31,7 @@ module Moro
         @monitor.show
         @logger.info "stats memory"
 
-        sleep(10)
+        sleep(@interval)
       end
     end
   end
