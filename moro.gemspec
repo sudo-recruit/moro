@@ -18,5 +18,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency('get_process_mem',["~> 0.2.0"])
   s.add_dependency('thor',["~> 0.18"])
-  s.add_dependency('dogstatsd-ruby',["~> 0.18"])
+  s.add_dependency('dogstatsd-ruby',["~> 1.6.0"])
 end
