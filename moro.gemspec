@@ -2,10 +2,11 @@ Gem::Specification.new do |s|
   s.name        = 'moro'
   s.version     = '0.0.2'
   s.date        = '2016-02-24'
-  s.summary     = "monitor process memory usage"
-  s.description = "monitor process memory usage"
+  s.summary     = "moro is a simple daemon to monitor process memory usage"
+  s.description = "moro is a simple daemon to monitor process memory usage"
   s.authors     = ["ocowchun"]
   s.email       = 'ben.yeh@sudo.com.tw'
+  s.executables = ["moro"]
   s.files = `git ls-files`.split($/)
   s.homepage    =
     'https://github.com/sudo-recruit/moro'
