@@ -1,7 +1,7 @@
 {
 	"processes": [{
 		"name": "unicorn",
-		"pid": "/Users/ocowchun/projects/github/jobboard/tmp/pids/server.pid"
+		"pid": "rails_project/tmp/pids/server.pid"
 	}],
 	"interval": 30,
 	"datadog": false
