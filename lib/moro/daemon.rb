@@ -29,10 +29,10 @@ module Moro
       end
 
       while true
-        data=@monitor.monit
+        process_usages=@monitor.monit
 
         @handlers.each do |handler|
-          handler.send(data)
+          handler.send(process_usages)
         end
 
         @logger.info "stats memory"

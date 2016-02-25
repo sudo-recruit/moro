@@ -7,9 +7,11 @@ module Moro
       @statsd = Statsd.new('localhost', 8125)
     end
 
-    def send(data)
-      name=data[:name]
-      @statsd.histogram("#{name}.memory", data[:memory])
+    def send(process_usages)
+      process_usages.each do |process|
+        name=process[:name]
+        @statsd.histogram("#{name}.memory", process[:memory])
+      end
     end
 
   end

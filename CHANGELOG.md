@@ -1,3 +1,6 @@
+##0.0.9
+* fix datadog send data problem
+
 ##0.0.8
 * improve dependency 
 
