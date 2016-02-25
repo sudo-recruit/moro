@@ -1,12 +1,12 @@
 require 'moro/monitor'
 require 'moro/datadog'
+require "moro/log"
 
 module Moro
   class Daemon
 
     def initialize(config)
       @monitor=Monitor.new(config)
-      @logger = Logger.new STDOUT
       build_handlers(config)
       puts config
 
@@ -21,11 +21,11 @@ module Moro
       start_message="start moro daemon"
       stop_message="stop moro daemon"
       puts start_message
-      @logger.info(start_message)
+      MyLog.log.info start_message
 
       at_exit do
         puts stop_message
-        @logger.info(stop_message)
+        MyLog.log.info stop_message
       end
 
       while true
@@ -35,7 +35,7 @@ module Moro
           handler.send(process_usages)
         end
 
-        @logger.info "stats memory"
+        MyLog.log.info "stats memory"
         sleep(@interval)
       end
     end

@@ -1,14 +1,13 @@
-require "logger"
 require "get_process_mem"
 require "moro/process"
+require "moro/log"
 
 module Moro
   class Monitor
 
     def initialize(config)
       @config=config
-      @logger = Logger.new STDOUT
-      @logger.info "moro show"
+      MyLog.log.info "moro show"
       @processes=get_processes
     end
 
