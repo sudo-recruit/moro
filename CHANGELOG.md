@@ -1,3 +1,6 @@
+##0.0.8
+* improve dependency 
+
 ##0.0.7
 * fix stupid comment
 
