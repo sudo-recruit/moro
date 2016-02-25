@@ -32,7 +32,7 @@ module Moro
     def get_processes()
       processes=[]
       @config["processes"].each do|p|
-        processes<<Process.new({name:p["name"],file:p["pid"]})
+        processes<<Process.new({name:p["name"],file:p["pid"],tags:p["tags"]})
       end
       processes
     end

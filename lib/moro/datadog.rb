@@ -10,7 +10,9 @@ module Moro
     def send(process_usages)
       process_usages.each do |process|
         name=process[:name]
-        @statsd.histogram("#{name}.memory", process[:memory])
+        tags=process[:tags]
+        memory=process[:memory]
+        @statsd.histogram("#{name}.memory",memory , :tags =>tags)
       end
     end
 

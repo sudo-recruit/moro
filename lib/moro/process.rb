@@ -2,12 +2,17 @@ require "get_process_mem"
 
 module Moro
   class Process
-    attr_reader :name,:pid,:file
+    attr_reader :name,:pid,:file,:tags
 
     def initialize(options)
       @logger = Logger.new STDOUT
       @name=options[:name]
       @file=options[:file]
+      if options[:tags]!=nil
+        @tags=options[:tags]
+      else
+        @tags=[]
+      end
       update_pid
     end
 
@@ -20,10 +25,10 @@ module Moro
         end
         pm=GetProcessMem.new(pid)
         mem = pm.mb
-        {name:name,memory:mem}
+        {name:name,memory:mem,tags:tags}
       else
         update_pid
-        {name:name,memory:0.0}
+        {name:name,memory:0.0,tags:tags}
       end
     end
 

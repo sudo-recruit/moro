@@ -1,3 +1,6 @@
+##0.0.10
+* add tags to datadog
+
 ##0.0.9
 * fix datadog send data problem
 
