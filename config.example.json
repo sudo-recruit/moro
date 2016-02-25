@@ -3,5 +3,6 @@
 		"name": "unicorn",
 		"pid": "/Users/ocowchun/projects/github/jobboard/tmp/pids/server.pid"
 	}],
-	"interval": 30
+	"interval": 30,
+	"datadog": false
 }

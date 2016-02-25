@@ -7,7 +7,7 @@ module Moro
     def initialize(config)
       @monitor=Monitor.new(config)
       @logger = Logger.new STDOUT
-      @dog=Datadog.new
+      build_handlers(config)
       puts config
 
       if config["interval"]!=nil
@@ -31,14 +31,24 @@ module Moro
       while true
         data=@monitor.monit
 
-        data.each do|d|
-          @dog.send(d)
+        @handlers.each do |handler|
+          handler.send(data)
         end
 
         @logger.info "stats memory"
-
         sleep(@interval)
       end
     end
+
+    private
+
+    def build_handlers(config)
+      @handlers=[]
+      if config["datadog"]
+        @dog=Datadog.new
+        @handlers <<@dog
+      end
+    end
+
   end
 end

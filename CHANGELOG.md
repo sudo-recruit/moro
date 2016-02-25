@@ -1,3 +1,6 @@
+##0.0.6
+* add `datadog` to config
+
 ##0.0.5
 * send memory data to datadog
 

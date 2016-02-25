@@ -8,8 +8,10 @@ module Moro
     end
 
     def send(data)
-      name=data[:name]
-      @statsd.histogram("#{name}.memory", data[:memory])
+      # name=data[:name]
+      # @statsd.histogram("#{name}.memory", data[:memory])
+
+      puts "handle data in dog"
     end
 
   end

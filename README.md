@@ -22,7 +22,11 @@ $ moro start --config="config.example.json"
 	"processes": [{
 		"name": "my_awesome_server",
 		"pid": "/tmp/pids/server.pid"
-	}]
+	}],
+	// monitor interval
+	"interval": 30,
+	// enable datadog statsd
+	"datadog": true
 }
 ```
 
