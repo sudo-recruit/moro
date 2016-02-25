@@ -1,3 +1,6 @@
+##0.0.7
+* fix stupid comment
+
 ##0.0.6
 * add `datadog` to config
 
