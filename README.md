@@ -23,11 +23,21 @@ $ moro start --config="config.example.json"
 		"name": "my_awesome_server",
 		"pid": "/tmp/pids/server.pid"
 	}],
-	// monitor interval
 	"interval": 30,
-	// enable datadog statsd
 	"datadog": true
 }
 ```
+
+###options
+
+####processes(default:[])
+processes to monitor 
+
+####interval(default:30)
+monitor interval
+
+####datadog(default:false)
+enable datadog statsd
+
 
 MIT
