@@ -1,3 +1,6 @@
+##0.0.13
+* add log level to options
+
 ##0.0.12
 * adjust logger level to info
 
