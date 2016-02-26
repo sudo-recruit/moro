@@ -1,11 +1,11 @@
 require "get_process_mem"
+require "moro/log"
 
 module Moro
   class Process
     attr_reader :name,:pid,:file,:tags
 
     def initialize(options)
-      @logger = Logger.new STDOUT
       @name=options[:name]
       @file=options[:file]
       if options[:tags]!=nil
@@ -40,7 +40,7 @@ module Moro
         f = File.open(filename, "r")
         line = f.gets
       rescue => err
-        @logger.error "Exception: #{err}"
+        Moro.logger.error "Exception: #{err}"
         nil
       end
     end
