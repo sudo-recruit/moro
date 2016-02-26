@@ -1,3 +1,6 @@
+##0.0.11
+* [pr4 refactor log](https://github.com/sudo-recruit/moro/pull/4)
+
 ##0.0.10
 * add tags to datadog
 
