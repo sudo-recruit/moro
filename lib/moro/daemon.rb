@@ -21,11 +21,11 @@ module Moro
       start_message="start moro daemon"
       stop_message="stop moro daemon"
       puts start_message
-      MyLog.log.info start_message
+      Moro.logger.info start_message
 
       at_exit do
         puts stop_message
-        MyLog.log.info stop_message
+        Moro.logger.info stop_message
       end
 
       while true
@@ -35,7 +35,7 @@ module Moro
           handler.send(process_usages)
         end
 
-        MyLog.log.info "stats memory"
+        Moro.logger.info "stats memory"
         sleep(@interval)
       end
     end

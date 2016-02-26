@@ -40,7 +40,7 @@ module Moro
         f = File.open(filename, "r")
         line = f.gets
       rescue => err
-        MyLog.log.error "Exception: #{err}"
+        Moro.logger.error "Exception: #{err}"
         nil
       end
     end

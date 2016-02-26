@@ -7,7 +7,7 @@ module Moro
 
     def initialize(config)
       @config=config
-      MyLog.log.info "moro show"
+      Moro.logger.info "moro show"
       @processes=get_processes
     end
 
