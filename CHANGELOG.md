@@ -1,3 +1,6 @@
+##0.0.12
+* adjust logger level to info
+
 ##0.0.11
 * [pr4 refactor log](https://github.com/sudo-recruit/moro/pull/4)
 
